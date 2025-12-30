@@ -15,28 +15,53 @@ Bienvenue sur mon portfolio technique regroupant mes projets et rapports académ
 
 ## 🔧 DevOps & Cloud
 
-### [Rapport DevOps - CI/CD & Kubernetes](./devops/rapport-devops)
-Projet complet de pipeline CI/CD avec GitHub Actions, Docker multi-architecture, et déploiement Kubernetes sur Minikube.
+### Projet
 
-**Technologies**: Flask, Vue.js, Docker, Kubernetes, GitHub Actions, Pytest, Vitest
+**[Projet CI/CD & Kubernetes](./devops/projet)** - Application Full Stack avec pipeline CI/CD complet
 
-### TPs DevOps
-- **[TP1 - Introduction au Cloud](./devops/tp1)** : Déploiement local, PaaS, IaaS (AWS EC2)
-- **[TP2 - AWS, Ansible, Packer, OpenTofu](./devops/tp2)** : Infrastructure as Code
-- **[TP5 - Kubernetes & CI/CD Avancé](./devops/tp5)** : Déploiements avancés
+| Technologie | Détails |
+|-------------|---------|
+| Frontend | Vue 3, Vite |
+| Backend | Flask, Python |
+| CI/CD | GitHub Actions |
+| Containers | Docker Multi-arch |
+| Orchestration | Kubernetes, Minikube |
+
+**🔗 Liens :**
+- [GitHub - Projet Full Stack](https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien)
+- [Docker Hub - quiz-api](https://hub.docker.com/r/ssssssss3/quiz-api)
+- [Docker Hub - quiz-ui](https://hub.docker.com/r/ssssssss3/quiz-ui)
+
+### TPs
+
+- [TP1 - Introduction au Cloud](./devops/tp1) - Déploiement local, PaaS (Render), IaaS (AWS EC2)
+- [TP2 - AWS, Ansible, Packer, OpenTofu](./devops/tp2) - Infrastructure as Code
+- [TP5 - Kubernetes & CI/CD Avancé](./devops/tp5) - Container Orchestration
+
+**🔗 Liens :**
+- [GitHub - TPs DevOps](https://github.com/ilyasgdo/ESIEE_2526_devops)
 
 ---
 
 ## 🎮 Unity & Graphisme
 
-### [UE Projet Pluridisciplinaire](./unity/)
-Projet Unity combinant génération procédurale et rendu graphique avancé.
+### Projet
 
-#### Sous-projets :
-- **[Nuages Volumétriques](./unity/nuages-volumetriques)** - Rendu temps réel avec ray marching
-- **[Terrain Procédural](./unity/terrain-procedural)** - Génération infinie avec bruit de Perlin
+**[Projet Génération Procédurale & Nuages Volumétriques](./unity/projet)**
 
-#### TPs Unity :
+Deux techniques graphiques avancées combinées :
+
+| Rapport | Techniques |
+|---------|------------|
+| [🌫️ Nuages Volumétriques](./unity/projet/nuages-volumetriques) | Ray Marching, Beer-Lambert, Mie Scattering |
+| [🏔️ Terrain Procédural](./unity/projet/terrain-procedural) | Perlin Noise, LOD dynamique, Chunk Streaming |
+
+**🔗 Liens :**
+- [GitHub - Procedural Generation & Volumetric Clouds](https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud)
+- [🎬 Vidéo YouTube](https://www.youtube.com/watch?v=IKLIivcP06g)
+
+### TPs
+
 - [TP 1 Chapitre 2](./unity/tp1-chapitre2)
 - [TP 2 Chapitre 2](./unity/tp2-chapitre2)
 - [TP 3 Chapitre 2](./unity/tp3-chapitre2)
@@ -46,6 +71,7 @@ Projet Unity combinant génération procédurale et rendu graphique avancé.
 
 ## 📫 Contact
 
-- **GitHub**: [ilyasgdo](https://github.com/ilyasgdo)
-- **Email**: ilyas.ghandaoui@edu.esiee.fr
-
+| | |
+|---|---|
+| **GitHub** | [github.com/ilyasgdo](https://github.com/ilyasgdo) |
+| **Email** | ilyas.ghandaoui@edu.esiee.fr |

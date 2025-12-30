@@ -1,87 +1,55 @@
 ---
-title: "Rapport DevOps - CI/CD & Kubernetes"
+title: "Projet DevOps - CI/CD & Kubernetes"
 description: "Rapport technique expert - Architecture Cloud Native, Pipeline CI/CD, Containerisation multi-architecture, Orchestration Kubernetes, Infrastructure as Code"
 publish: true
 tags:
   - devops
+  - projet
   - ci-cd
   - kubernetes
   - docker
   - github-actions
   - cloud-native
-  - microservices
-  - infrastructure-as-code
-  - containerization
-  - automation
 keywords:
   - Site Reliability Engineering
   - Platform Engineering
   - GitOps
   - DevSecOps
-  - observability
-  - scalability
-  - high-availability
-  - zero-downtime-deployment
 ---
 
 <!-- 
 Expert Technical Report - Cloud Native Architecture
-Keywords: Site Reliability Engineering (SRE), Platform Engineering, DevSecOps, GitOps, 
-Continuous Integration, Continuous Deployment, Continuous Delivery, 
-Container Orchestration, Microservices Architecture, Infrastructure as Code (IaC),
-Immutable Infrastructure, Blue-Green Deployment, Canary Releases, Rolling Updates,
-Horizontal Pod Autoscaling (HPA), Service Mesh, Observability, Distributed Tracing,
-Container Registry, Multi-stage Docker Builds, Docker Compose, Helm Charts,
-Kubernetes Operators, Custom Resource Definitions (CRD), RBAC, Network Policies,
-Ingress Controllers, Load Balancing, High Availability, Fault Tolerance,
-Disaster Recovery, Zero Downtime Deployment, Production-Grade Infrastructure
+Keywords: CI/CD Pipeline, GitHub Actions, Docker Multi-arch,
+Kubernetes Deployment, Minikube, Flask, Vue.js, Full Stack
 -->
 
-# Rendus Projet + TP DEVOPS
+# 📚 Rapport Technique CI/CD - Projet Qrious Quiz
 
 ![image.png](/static/devops/image.png)
 
 > Projet Cloud Native DevOps - ESIEE Paris 2025
 > 
-> 
-> 👤 **Auteurs**: Ilyas GHANDAOUI  E4FI ESIEE Paris
-> 
-> 📅 **Date**: 28 décembre 2025
-> 
-> ### Chaque partie possède son propre rapport
->  
-
-## Projet
-
-[https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien/](https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien/)
-
-# 📚 Rapport Technique CI/CD - Projet Qrious Quiz
-
-[https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien](https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien)
-
-> Projet Cloud Native DevOps - ESIEE Paris 2025
-> 
-> 
-> 👤 **Auteurs**: Ilyas GHANDAOUI  E4FI ESIEE Paris
+> 👤 **Auteur**: Ilyas GHANDAOUI E4FI ESIEE Paris
 > 
 > 📅 **Date**: 28 décembre 2025
-> 
+
+**🔗 Repository** : [https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien](https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien)
 
 ---
 
 ## 📋 Table des Matières
 
-1. [Introduction](about:blank#1-introduction)
-2. [Architecture Globale](about:blank#2-architecture-globale)
-3. [Phase 1 : Application Web](about:blank#3-phase-1--application-web)
-4. [Phase 2 : Intégration Continue (CI)](about:blank#4-phase-2--int%C3%A9gration-continue-ci)
-5. [Phase 3 : Livraison Continue (CD)](about:blank#5-phase-3--livraison-continue-cd)
-6. [Phase 4 : Déploiement Kubernetes](about:blank#6-phase-4--d%C3%A9ploiement-kubernetes)
-7. [Base de Données](about:blank#7-base-de-donn%C3%A9es)
-8. [Scripts d’Automatisation](about:blank#8-scripts-dautomatisation)
-9. [Sécurité](about:blank#9-s%C3%A9curit%C3%A9)
-10. [Guide de Déploiement](about:blank#10-guide-de-d%C3%A9ploiement)
-11. [Conclusion](about:blank#11-conclusion)
+1. [Introduction](#1-introduction)
+2. [Architecture Globale](#2-architecture-globale)
+3. [Phase 1 : Application Web](#3-phase-1--application-web)
+4. [Phase 2 : Intégration Continue (CI)](#4-phase-2--intégration-continue-ci)
+5. [Phase 3 : Livraison Continue (CD)](#5-phase-3--livraison-continue-cd)
+6. [Phase 4 : Déploiement Kubernetes](#6-phase-4--déploiement-kubernetes)
+7. [Base de Données](#7-base-de-données)
+8. [Scripts d'Automatisation](#8-scripts-dautomatisation)
+9. [Sécurité](#9-sécurité)
+10. [Guide de Déploiement](#10-guide-de-déploiement)
+11. [Conclusion](#11-conclusion)
 
 ---
 
@@ -89,7 +57,7 @@ Disaster Recovery, Zero Downtime Deployment, Production-Grade Infrastructure
 
 ### 1.1 Contexte du Projet
 
-Ce projet implémente une **architecture CI/CD complète** pour une application de quiz web. L’objectif est de démontrer les pratiques DevOps modernes avec :
+Ce projet implémente une **architecture CI/CD complète** pour une application de quiz web. L'objectif est de démontrer les pratiques DevOps modernes avec :
 
 - **Intégration Continue (CI)** : Tests automatisés et build Docker
 - **Livraison Continue (CD)** : Déploiement automatique sur Kubernetes
@@ -113,7 +81,7 @@ Ce projet implémente une **architecture CI/CD complète** pour une application 
 
 ## 2. Architecture Globale
 
-### 2.1 Vue d’Ensemble du Système
+### 2.1 Vue d'Ensemble du Système
 
 ![2.png](/static/devops/2.png)
 
@@ -125,7 +93,7 @@ Ce projet implémente une **architecture CI/CD complète** pour une application 
 
 ## 3. Phase 1 : Application Web
 
-### 3.1 Architecture de l’Application
+### 3.1 Architecture de l'Application
 
 ![4.png](/static/devops/4.png)
 
@@ -182,41 +150,41 @@ Ce projet implémente une **architecture CI/CD complète** pour une application 
 name: CI/CD Pipeline
 
 on:
-push:
-branches:[main, master]
-pull_request:
-branches:[main, master]
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
 
 jobs:
-test-frontend:
-name: Frontend Tests (Vitest)
-runs-on: ubuntu-latest
-steps:
--uses: actions/checkout@v4
--uses: actions/setup-node@v4
-with:
-node-version:'20'
--run: npm ci
-working-directory: quiz-ui
--run: npm run test:run
-working-directory: quiz-ui
+  test-frontend:
+    name: Frontend Tests (Vitest)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+        working-directory: quiz-ui
+      - run: npm run test:run
+        working-directory: quiz-ui
 
-test-backend:
-name: Backend Tests (Pytest)
-runs-on: ubuntu-latest
-steps:
--uses: actions/checkout@v4
--uses: actions/setup-python@v5
-with:
-python-version:'3.9'
--run: pip install -r requirements.txt
-working-directory: quiz-api
--run: pytest tests/ -v
-working-directory: quiz-api
+  test-backend:
+    name: Backend Tests (Pytest)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - run: pip install -r requirements.txt
+        working-directory: quiz-api
+      - run: pytest tests/ -v
+        working-directory: quiz-api
 
-build-and-push:
-needs:[test-frontend, test-backend]
-runs-on: ubuntu-latest
+  build-and-push:
+    needs: [test-frontend, test-backend]
+    runs-on: ubuntu-latest
     # ... build Docker multi-arch
 ```
 
@@ -262,30 +230,30 @@ runs-on: ubuntu-latest
 
 ### 6.2 Manifests Kubernetes
 
-### ConfigMap
+#### ConfigMap
 
 ```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
-name: quiz-config
+  name: quiz-config
 data:
-FLASK_ENV:"production"
-FLASK_DEBUG:"0"
-VITE_API_URL:"http://quiz-backend:5000"
+  FLASK_ENV: "production"
+  FLASK_DEBUG: "0"
+  VITE_API_URL: "http://quiz-backend:5000"
 ```
 
-### Secrets
+#### Secrets
 
 ```yaml
 apiVersion: v1
 kind: Secret
 metadata:
-name: quiz-secrets
+  name: quiz-secrets
 type: Opaque
 data:
-SECRET_KEY: <base64>
-ADMIN_PASSWORD: <base64>
+  SECRET_KEY: <base64>
+  ADMIN_PASSWORD: <base64>
 ```
 
 ### 6.3 Ressources et Limites
@@ -316,9 +284,9 @@ ADMIN_PASSWORD: <base64>
 
 ---
 
-## 8. Scripts d’Automatisation
+## 8. Scripts d'Automatisation
 
-### 8.1 Vue d’Ensemble des Scripts
+### 8.1 Vue d'Ensemble des Scripts
 
 ![15.png](/static/devops/15.png)
 
@@ -426,24 +394,3 @@ kubectl rollout restart deployment/quiz-frontend
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [Vue.js Documentation](https://vuejs.org/)
-
----
-
-
----
-
-## TPs DevOps
-
-> Projet Cloud Native DevOps - ESIEE Paris 2025
-> 
-> 👤 **Auteur**: Ilyas GHANDAOUI E4FI
-> 
-> 📅 **Date**: 28 décembre 2025
-
-Dépôt git avec tous les TPs : [https://github.com/ilyasgdo/ESIEE_2526_devops.git](https://github.com/ilyasgdo/ESIEE_2526_devops.git)
-
-### Liste des TPs
-
-- **[TP1 - Introduction au Cloud et Déploiement](./tp1)** : Déploiement local, PaaS (Render), IaaS (AWS EC2)
-- **[TP2 - AWS, Ansible, Packer, OpenTofu](./tp2)** : Scripts AWS, Ansible, Packer, OpenTofu/Terraform
-- **[TP5 - Kubernetes & CI/CD Avancé](./tp5)** : Kubernetes, déploiements avancés, CI/CD complet
