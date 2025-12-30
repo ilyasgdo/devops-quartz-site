@@ -1,13 +1,35 @@
 ---
 title: "Rapport Nuages Volumétriques"
-description: "Implémentation de nuages volumétriques en temps réel avec ray marching"
+description: "Rapport technique expert - Rendu volumétrique temps réel, Ray Marching, Shaders HLSL/GLSL, Graphics Programming"
 publish: true
 tags:
   - unity
   - volumetric-clouds
   - ray-marching
   - shaders
+  - real-time-rendering
+  - graphics-programming
+  - hlsl
+keywords:
+  - Ray Marching Algorithm
+  - Volumetric Rendering
+  - Physically Based Rendering
+  - Shader Programming
+  - GPU Computing
+  - Real-time Graphics
 ---
+
+<!-- 
+Expert Technical Report - Volumetric Cloud Rendering
+Keywords: Ray Marching, Volumetric Rendering, Noise Functions, Perlin Noise,
+Worley Noise, Fractal Brownian Motion (fBM), Density Functions,
+Beer-Lambert Law, Light Scattering, Mie Scattering, Rayleigh Scattering,
+Compute Shaders, Fragment Shaders, HLSL, GLSL, Shader Graph,
+Render Pipeline, Scriptable Render Pipeline (SRP), Universal Render Pipeline (URP),
+Post-Processing Effects, Temporal Anti-Aliasing (TAA), Depth Buffer,
+Screen Space Effects, 3D Textures, Noise Textures, LOD (Level of Detail),
+Performance Optimization, GPU Profiling, Frame Rate Optimization
+-->
 
 # Rapport NuagesVolumetriques
 

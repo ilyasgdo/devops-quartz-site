@@ -1,13 +1,35 @@
 ---
 title: "Rapport Génération de Terrain Procédural"
-description: "Génération de terrain procédural infini avec bruit de Perlin et LOD"
+description: "Rapport technique expert - Génération procédurale, Algorithmes de bruit, LOD dynamique, Mesh optimization"
 publish: true
 tags:
   - unity
   - procedural-generation
   - perlin-noise
   - terrain
+  - mesh-generation
+  - level-of-detail
+  - compute-shaders
+keywords:
+  - Procedural Content Generation
+  - Noise Algorithms
+  - Mesh Optimization
+  - GPU Tessellation
+  - Infinite Terrain
+  - Chunk-based Loading
 ---
+
+<!-- 
+Expert Technical Report - Procedural Terrain Generation
+Keywords: Procedural Generation, Perlin Noise, Simplex Noise, Worley Noise,
+Fractal Brownian Motion (fBM), Octaves, Lacunarity, Persistence,
+Height Maps, Normal Maps, Slope-based Texturing, Triplanar Mapping,
+Level of Detail (LOD), Quadtree, Chunked Terrain, Terrain Streaming,
+Mesh Generation, Vertex Buffers, Index Buffers, GPU Instancing,
+Compute Shaders, Tessellation, Displacement Mapping, Parallax Occlusion,
+Threading, Job System, Burst Compiler, SIMD, Cache Optimization,
+Biome Generation, Erosion Simulation, Hydraulic Erosion, Thermal Erosion
+-->
 
 # Rapport Génération de Terrain Procedural
 

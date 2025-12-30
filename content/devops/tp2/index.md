@@ -1,6 +1,6 @@
 ---
 title: "TP2 - AWS, Ansible, Packer, OpenTofu"
-description: "TP2 DevOps - Scripts AWS, Ansible, Packer, OpenTofu/Terraform"
+description: "Rapport technique expert - Infrastructure as Code, Configuration Management, Image Building, Provisioning Automation"
 publish: true
 tags:
   - devops
@@ -10,7 +10,30 @@ tags:
   - packer
   - terraform
   - opentofu
+  - infrastructure-as-code
+  - configuration-management
+  - immutable-infrastructure
+keywords:
+  - Infrastructure as Code
+  - Configuration Management
+  - Immutable Infrastructure
+  - Golden Image Pattern
+  - Declarative Infrastructure
+  - State Management
+  - Drift Detection
 ---
+
+<!-- 
+Expert Technical Report - Infrastructure as Code & Automation
+Keywords: Infrastructure as Code (IaC), Configuration Management, Ansible Playbooks,
+Packer Templates, OpenTofu/Terraform, HashiCorp Configuration Language (HCL),
+AWS SDK, AWS CLI, EC2 Instances, AMI (Amazon Machine Image), 
+Idempotency, Declarative Configuration, Imperative vs Declarative,
+State Files, Remote State Backend, State Locking, Modules,
+Provider Plugins, Resource Graph, Dependency Management,
+Immutable Infrastructure, Golden Image, Baking vs Frying,
+Configuration Drift, Compliance as Code, Policy as Code
+-->
 
 # TP2 - AWS, Ansible, Packer, OpenTofu
 

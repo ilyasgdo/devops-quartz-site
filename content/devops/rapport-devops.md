@@ -1,6 +1,6 @@
 ---
 title: "Rapport DevOps - CI/CD & Kubernetes"
-description: "Projet Cloud Native DevOps - Pipeline CI/CD, Tests automatisés, Docker, Kubernetes"
+description: "Rapport technique expert - Architecture Cloud Native, Pipeline CI/CD, Containerisation multi-architecture, Orchestration Kubernetes, Infrastructure as Code"
 publish: true
 tags:
   - devops
@@ -8,7 +8,34 @@ tags:
   - kubernetes
   - docker
   - github-actions
+  - cloud-native
+  - microservices
+  - infrastructure-as-code
+  - containerization
+  - automation
+keywords:
+  - Site Reliability Engineering
+  - Platform Engineering
+  - GitOps
+  - DevSecOps
+  - observability
+  - scalability
+  - high-availability
+  - zero-downtime-deployment
 ---
+
+<!-- 
+Expert Technical Report - Cloud Native Architecture
+Keywords: Site Reliability Engineering (SRE), Platform Engineering, DevSecOps, GitOps, 
+Continuous Integration, Continuous Deployment, Continuous Delivery, 
+Container Orchestration, Microservices Architecture, Infrastructure as Code (IaC),
+Immutable Infrastructure, Blue-Green Deployment, Canary Releases, Rolling Updates,
+Horizontal Pod Autoscaling (HPA), Service Mesh, Observability, Distributed Tracing,
+Container Registry, Multi-stage Docker Builds, Docker Compose, Helm Charts,
+Kubernetes Operators, Custom Resource Definitions (CRD), RBAC, Network Policies,
+Ingress Controllers, Load Balancing, High Availability, Fault Tolerance,
+Disaster Recovery, Zero Downtime Deployment, Production-Grade Infrastructure
+-->
 
 # Rendus Projet + TP DEVOPS
 
@@ -22,7 +49,7 @@ tags:
 > 📅 **Date**: 28 décembre 2025
 > 
 > ### Chaque partie possède son propre rapport
-> 
+>  
 
 ## Projet
 

@@ -1,13 +1,35 @@
 ---
 title: "TP1 - Introduction au Cloud et Déploiement"
-description: "TP1 DevOps - Déploiement local, PaaS (Render), IaaS (AWS EC2)"
+description: "Rapport technique expert - Cloud Computing, Platform as a Service, Infrastructure as a Service, Deployment Strategies"
 publish: true
 tags:
   - devops
   - tp
   - aws
   - cloud
+  - paas
+  - iaas
+  - cloud-computing
+  - deployment
+keywords:
+  - Cloud Architecture
+  - Multi-cloud Strategy
+  - Serverless Computing
+  - Elastic Scalability
+  - Cloud Migration
+  - Cost Optimization
 ---
+
+<!-- 
+Expert Technical Report - Cloud Computing Fundamentals
+Keywords: Cloud Computing, Amazon Web Services (AWS), Platform as a Service (PaaS),
+Infrastructure as a Service (IaaS), Software as a Service (SaaS), 
+Elastic Compute Cloud (EC2), Virtual Private Cloud (VPC), Security Groups,
+Auto Scaling, Load Balancing, High Availability, Fault Tolerance,
+Cloud Migration, Hybrid Cloud, Multi-Cloud Architecture, Serverless,
+Container as a Service (CaaS), Function as a Service (FaaS),
+Cloud Native Applications, Twelve-Factor App, Microservices
+-->
 
 # TP1 - Introduction au Cloud et Déploiement
 

@@ -1,13 +1,36 @@
 ---
 title: "TP5 - Kubernetes & CI/CD Avancé"
-description: "TP5 DevOps - Kubernetes, déploiements avancés, CI/CD complet"
+description: "Rapport technique expert - Container Orchestration, Advanced Deployment Strategies, Production-Grade CI/CD Pipelines"
 publish: true
 tags:
   - devops
   - tp
   - kubernetes
   - ci-cd
+  - container-orchestration
+  - production-grade
+  - enterprise-architecture
+keywords:
+  - Kubernetes Operators
+  - Custom Resource Definitions
+  - Service Mesh
+  - Observability Stack
+  - GitOps Workflows
+  - Progressive Delivery
 ---
+
+<!-- 
+Expert Technical Report - Kubernetes & Advanced CI/CD
+Keywords: Kubernetes (K8s), Container Orchestration, Pod Lifecycle,
+Deployments, StatefulSets, DaemonSets, Jobs, CronJobs,
+Services, Ingress, Network Policies, RBAC, ServiceAccounts,
+ConfigMaps, Secrets, Persistent Volumes (PV), Persistent Volume Claims (PVC),
+Horizontal Pod Autoscaler (HPA), Vertical Pod Autoscaler (VPA),
+Cluster Autoscaler, Node Affinity, Pod Anti-Affinity, Taints and Tolerations,
+Helm Charts, Kustomize, ArgoCD, Flux, GitOps, Progressive Delivery,
+Canary Deployments, Blue-Green Deployments, A/B Testing,
+Service Mesh (Istio, Linkerd), Observability (Prometheus, Grafana, Jaeger)
+-->
 
 # TP5 - Kubernetes & CI/CD Avancé
 
