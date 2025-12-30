@@ -20,6 +20,11 @@ Projet complet de pipeline CI/CD avec GitHub Actions, Docker multi-architecture,
 
 **Technologies**: Flask, Vue.js, Docker, Kubernetes, GitHub Actions, Pytest, Vitest
 
+### TPs DevOps
+- **[TP1 - Introduction au Cloud](./devops/tp1)** : Déploiement local, PaaS, IaaS (AWS EC2)
+- **[TP2 - AWS, Ansible, Packer, OpenTofu](./devops/tp2)** : Infrastructure as Code
+- **[TP5 - Kubernetes & CI/CD Avancé](./devops/tp5)** : Déploiements avancés
+
 ---
 
 ## 🎮 Unity & Graphisme
@@ -31,7 +36,7 @@ Projet Unity combinant génération procédurale et rendu graphique avancé.
 - **[Nuages Volumétriques](./unity/nuages-volumetriques)** - Rendu temps réel avec ray marching
 - **[Terrain Procédural](./unity/terrain-procedural)** - Génération infinie avec bruit de Perlin
 
-#### TPs :
+#### TPs Unity :
 - [TP 1 Chapitre 2](./unity/tp1-chapitre2)
 - [TP 2 Chapitre 2](./unity/tp2-chapitre2)
 - [TP 3 Chapitre 2](./unity/tp3-chapitre2)
@@ -43,3 +48,4 @@ Projet Unity combinant génération procédurale et rendu graphique avancé.
 
 - **GitHub**: [ilyasgdo](https://github.com/ilyasgdo)
 - **Email**: ilyas.ghandaoui@edu.esiee.fr
+
