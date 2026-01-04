@@ -369,31 +369,8 @@ kubectl rollout restart deployment/quiz-frontend
 
 ![Architecture Cloud](/static/devops/tempimg1.png)
 
-```mermaid
-flowchart TB
-    subgraph Internet["🌐 INTERNET"]
-        Users["Utilisateurs"]
-    end
-    
-    subgraph Cloudflare["☁️ CLOUDFLARE"]
-        Frontend["ilyasghandaoui.store<br/>Frontend - Pages"]
-        Backend["api.ilyasghandaoui.store<br/>Backend - Tunnel"]
-    end
-    
-    subgraph Local["💻 MACHINE LOCALE"]
-        Tunnel["cloudflared<br/>Tunnel Client"]
-        PortForward["kubectl port-forward<br/>:5000"]
-        subgraph Minikube["⎈ MINIKUBE"]
-            BackendSvc["quiz-backend<br/>Service :5000"]
-        end
-    end
-    
-    Users --> Frontend
-    Users --> Backend
-    Backend --> Tunnel
-    Tunnel --> PortForward
-    PortForward --> BackendSvc
-```
+
+![123.png](/static/devops/123.png)
 
 > **🔒 Sécurité** : Le port-forward écoute uniquement sur `localhost` (127.0.0.1). Le trafic est chiffré de bout en bout via le tunnel Cloudflare.
 
