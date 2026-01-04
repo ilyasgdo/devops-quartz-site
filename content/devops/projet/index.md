@@ -49,7 +49,8 @@ Kubernetes Deployment, Minikube, Flask, Vue.js, Full Stack
 8. [Scripts d'Automatisation](#8-scripts-dautomatisation)
 9. [Sécurité](#9-sécurité)
 10. [Guide de Déploiement](#10-guide-de-déploiement)
-11. [Conclusion](#11-conclusion)
+11. [Phase 5 : Déploiement Cloud (Cloudflare)](#11-phase-5--déploiement-cloud-cloudflare)
+12. [Conclusion](#12-conclusion)
 
 ---
 
@@ -360,13 +361,141 @@ kubectl rollout restart deployment/quiz-frontend
 
 ---
 
-## 11. Conclusion
+## 11. Phase 5 : Déploiement Cloud (Cloudflare)
 
-### 11.1 Récapitulatif du Projet
+ En plus du déploiement local Minikube, l'application est désormais accessible publiquement via Cloudflare !
+
+### 11.1 Architecture Cloud
+
+![Architecture Cloud](/static/devops/tempimg1.png)
+
+```mermaid
+flowchart TB
+    subgraph Internet["🌐 INTERNET"]
+        Users["Utilisateurs"]
+    end
+    
+    subgraph Cloudflare["☁️ CLOUDFLARE"]
+        Frontend["ilyasghandaoui.store<br/>Frontend - Pages"]
+        Backend["api.ilyasghandaoui.store<br/>Backend - Tunnel"]
+    end
+    
+    subgraph Local["💻 MACHINE LOCALE"]
+        Tunnel["cloudflared<br/>Tunnel Client"]
+        PortForward["kubectl port-forward<br/>:5000"]
+        subgraph Minikube["⎈ MINIKUBE"]
+            BackendSvc["quiz-backend<br/>Service :5000"]
+        end
+    end
+    
+    Users --> Frontend
+    Users --> Backend
+    Backend --> Tunnel
+    Tunnel --> PortForward
+    PortForward --> BackendSvc
+```
+
+> **🔒 Sécurité** : Le port-forward écoute uniquement sur `localhost` (127.0.0.1). Le trafic est chiffré de bout en bout via le tunnel Cloudflare.
+
+### 11.2 Composants Cloud
+
+| Composant | Service | URL |
+|-----------|---------|-----|
+| **Frontend** | Cloudflare Pages | https://ilyasghandaoui.store |
+| **Backend API** | Cloudflare Tunnel | https://api.ilyasghandaoui.store |
+| **Documentation** | Cloudflare Pages | https://docs.ilyasghandaoui.store |
+
+### 11.3 Workflow de Déploiement Frontend
+
+Un nouveau workflow GitHub Actions a été ajouté pour déployer automatiquement le frontend sur Cloudflare Pages :
+
+```yaml
+# .github/workflows/deploy-frontend.yml
+name: Deploy Frontend to Cloudflare Pages
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'quiz-ui/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Cloudflare Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+        working-directory: quiz-ui
+      - run: npm run build
+        working-directory: quiz-ui
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
+      - uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: quiz-frontend
+          directory: quiz-ui/dist
+```
+
+### 11.4 Configuration Cloudflare Tunnel
+
+Le backend Flask sur Minikube est exposé publiquement via un tunnel Cloudflare :
+
+**Configuration du tunnel** (`~/.cloudflared/config.yml`) :
+
+```yaml
+tunnel: 50ea3b9e-3937-4c50-b6e0-36bb54fb9591
+credentials-file: ~/.cloudflared/50ea3b9e-....json
+
+ingress:
+  - hostname: api.ilyasghandaoui.store
+    service: http://localhost:5000
+  - service: http_status:404
+```
+
+**Démarrage du tunnel** :
+
+```bash
+# Terminal 1 : Port-forward Kubernetes
+kubectl port-forward svc/quiz-backend 5000:5000
+
+# Terminal 2 : Tunnel Cloudflare
+cloudflared tunnel run quiz-backend
+```
+
+### 11.5 Secrets GitHub Requis
+
+| Secret | Description |
+|--------|-------------|
+| `CLOUDFLARE_API_TOKEN` | Token API Cloudflare |
+| `CLOUDFLARE_ACCOUNT_ID` | ID du compte Cloudflare |
+| `VITE_API_URL` | URL de l'API backend (`https://api.ilyasghandaoui.store`) |
+
+### 11.6 Avantages du Déploiement Cloud
+
+| Aspect | Bénéfice |
+|--------|----------|
+| **Accessibilité** | Application accessible depuis n'importe où |
+| **SSL/TLS** | Certificats HTTPS gérés automatiquement |
+| **CDN** | Distribution globale via le réseau Cloudflare |
+| **Zero Trust** | Protection par authentification email (ESIEE) |
+| **CI/CD complet** | Déploiement automatique sur push |
+
+---
+
+## 12. Conclusion
+
+### 12.1 Récapitulatif du Projet
 
 ![18.png](/static/devops/18.png)
 
-### 11.2 Objectifs Atteints
+### 12.2 Objectifs Atteints
 
 | Objectif | Statut | Détails |
 | --- | --- | --- |
@@ -375,6 +504,7 @@ kubectl rollout restart deployment/quiz-frontend
 | Pipeline CI/CD | ✅ | GitHub Actions |
 | Images Docker | ✅ | Multi-arch (amd64/arm64) |
 | Déploiement K8s | ✅ | Minikube avec manifests |
+| Déploiement Cloud | ✅ | Cloudflare Pages + Tunnel |
 | Opérations CRUD | ✅ | Create, Read, Update, Delete |
 | Documentation | ✅ | README + Rapport technique |
 
@@ -387,6 +517,8 @@ kubectl rollout restart deployment/quiz-frontend
 - [Repository GitHub](https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien)
 - [Docker Hub - quiz-api](https://hub.docker.com/r/ssssssss3/quiz-api)
 - [Docker Hub - quiz-ui](https://hub.docker.com/r/ssssssss3/quiz-ui)
+- [Application Live](https://ilyasghandaoui.store)
+- [API Backend](https://api.ilyasghandaoui.store)
 
 ### B. Références
 
@@ -394,3 +526,5 @@ kubectl rollout restart deployment/quiz-frontend
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [Vue.js Documentation](https://vuejs.org/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)
