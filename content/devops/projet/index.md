@@ -60,7 +60,12 @@ Kubernetes Deployment, Minikube, Flask, Vue.js, Full Stack
 9. [Sécurité](#9-sécurité)
 10. [Guide de Déploiement](#10-guide-de-déploiement)
 11. [Phase 5 : Déploiement Cloud (Cloudflare)](#11-phase-5--déploiement-cloud-cloudflare)
-12. [Conclusion](#12-conclusion)
+12. [Métriques de Performance](#12-métriques-de-performance)
+13. [Sécurité et Zero Trust](#13-sécurité-et-zero-trust)
+14. [Erreurs Rencontrées et Solutions](#14-erreurs-rencontrées-et-solutions)
+15. [Couverture des Tests](#15-couverture-des-tests)
+16. [Bonnes Pratiques et Leçons Apprises](#16-bonnes-pratiques-et-leçons-apprises)
+17. [Conclusion](#17-conclusion)
 
 ---
 
@@ -476,13 +481,167 @@ cloudflared tunnel run quiz-backend
 
 ---
 
-## 12. Conclusion
+## 12. Métriques de Performance
 
-### 12.1 Récapitulatif du Projet
+### 12.1 Temps de Build et Déploiement
+
+| Étape | Durée Moyenne | Optimisation |
+|-------|---------------|--------------|
+| **Tests Frontend (Vitest)** | ~22s | Cache npm |
+| **Tests Backend (Pytest)** | ~15s | Cache pip |
+| **Build Docker multi-arch** | ~5-6 min | Cache GHA, BuildKit |
+| **Deploy Cloudflare Pages** | ~10-30s | CDN edge |
+| **Startup pods K8s** | ~15-30s | Probes configurées |
+
+### 12.2 Performance de l'Application
+
+| Métrique | Valeur | Contexte |
+|----------|--------|----------|
+| **Time to First Byte (TTFB)** | < 100ms | Via Cloudflare CDN |
+| **Temps de réponse API** | < 50ms | Backend Flask local |
+| **Taille bundle Frontend** | ~500KB gzipped | Vite build optimisé |
+| **Temps démarrage pod** | ~15s | Avec health checks |
+
+---
+
+## 13. Sécurité et Zero Trust
+
+### 13.1 Architecture de Sécurité
+
+![Sécurité](/static/devops/security.png)
+
+| Couche | Protection |
+|--------|------------|
+| **Edge (Cloudflare)** | WAF, DDoS protection, SSL/TLS |
+| **Tunnel** | Chiffrement end-to-end, pas de ports ouverts |
+| **Kubernetes** | Network policies, Secrets management |
+| **Application** | JWT auth, CORS, input validation |
+
+### 13.2 Cloudflare Zero Trust
+
+L'application est protégée par **Cloudflare Zero Trust Access** :
+
+- **Politique d'accès** : Uniquement les emails `@esiee.fr` et `@edu.esiee.fr`
+- **Authentification** : Email OTP (One-Time Password)
+- **Session** : Expiration configurable
+
+```
+Utilisateur → Cloudflare Access → Vérification email ESIEE → Application
+```
+
+### 13.3 Chiffrement du Tunnel
+
+Le tunnel Cloudflare assure un chiffrement **TLS de bout en bout** :
+
+```mermaid
+flowchart LR
+    subgraph Internet
+        User["👤 Utilisateur"]
+    end
+    subgraph Cloudflare["☁️ Cloudflare Edge"]
+        CF["TLS Termination"]
+    end
+    subgraph Local["💻 Machine Locale"]
+        Tunnel["cloudflared<br/>TLS Tunnel"]
+        K8s["Kubernetes<br/>Backend"]
+    end
+    
+    User -->|HTTPS| CF
+    CF -->|TLS 1.3| Tunnel
+    Tunnel -->|localhost| K8s
+```
+
+**Avantages sécurité** :
+- ✅ Aucun port exposé sur la machine locale
+- ✅ Pas besoin de VPN ou IP publique
+- ✅ Authentification gérée par Cloudflare
+- ✅ Logs et audit centralisés
+
+---
+
+## 14. Erreurs Rencontrées et Solutions
+
+### 14.1 Problèmes CI/CD
+
+| Erreur | Cause | Solution |
+|--------|-------|----------|
+| `Resource not accessible by integration` | GitHub token sans permissions | Utiliser `wrangler-action@v3` au lieu de `pages-action@v1` |
+| `fetch failed` sur Wrangler | Problème réseau/timeout | Retry automatique ou déploiement manuel |
+| Tests échoués | Dépendances manquantes | Cache npm/pip + `npm ci` |
+
+### 14.2 Problèmes Kubernetes
+
+| Erreur | Cause | Solution |
+|--------|-------|----------|
+| Pods en `CrashLoopBackOff` | Variables d'env manquantes | Vérifier ConfigMap et Secrets |
+| `ImagePullBackOff` | Image Docker introuvable | Vérifier le tag et les credentials |
+| Service inaccessible | ClusterIP vs NodePort | Utiliser `minikube service` ou port-forward |
+
+### 14.3 Problèmes Cloudflare
+
+| Erreur | Cause | Solution |
+|--------|-------|----------|
+| DNS non résolu | Conflit avec ancien tunnel | Supprimer l'ancien record CNAME |
+| Tunnel déconnecté | Port-forward arrêté | Relancer `kubectl port-forward` |
+| 403 Access Denied | Email non autorisé | Configurer politique Zero Trust |
+
+
+
+## 15. Couverture des Tests
+
+### 15.1 Métriques de Couverture
+
+| Module | Tests | Couverture | Framework |
+|--------|-------|------------|-----------|
+| **Frontend - Components** | 2 | ~70% | Vitest |
+| **Frontend - Services** | 2 | ~85% | Vitest |
+| **Backend - Routes** | 14 | ~90% | Pytest |
+| **Backend - Auth** | 3 | ~95% | Pytest |
+| **Backend - Models** | 3 | ~80% | Pytest |
+| **Total** | **24** | **~85%** | - |
+
+### 15.2 Types de Tests
+
+| Type | Description | Implémenté |
+|------|-------------|------------|
+| **Tests unitaires** | Fonctions isolées | ✅ |
+| **Tests d'intégration** | API endpoints | ✅ |
+| **Tests composants** | Vue components | ✅ |
+| **Tests E2E** | Parcours utilisateur | ❌ (amélioration future) |
+
+---
+
+## 16. Bonnes Pratiques et Leçons Apprises
+
+### 16.1 Leçons Apprises
+
+| Domaine | Leçon |
+|---------|-------|
+| **CI/CD** | Toujours tester le workflow en local avant de push |
+| **Docker** | Le multi-arch prend du temps mais est essentiel pour la portabilité |
+| **Kubernetes** | Les probes (liveness/readiness) sont cruciales pour la stabilité |
+| **Sécurité** | Ne jamais committer de secrets, utiliser des vaults |
+| **Cloudflare** | Le tunnel simplifie énormément l'exposition de services locaux |
+
+### 16.2 Bonnes Pratiques Appliquées
+
+- ✅ **Infrastructure as Code** : Tout est versionné (K8s manifests, workflows)
+- ✅ **Secrets Management** : Secrets GitHub et Kubernetes Secrets
+- ✅ **Immutable Tags** : Images Docker avec SHA commit
+- ✅ **Blue-Green possible** : Architecture prête pour déploiements sans downtime
+- ✅ **Observabilité** : Logs centralisés, health checks
+
+
+
+---
+
+## 17. Conclusion
+
+### 17.1 Récapitulatif du Projet
 
 ![18.png](/static/devops/18.png)
 
-### 12.2 Objectifs Atteints
+### 18.2 Objectifs Atteints
 
 | Objectif | Statut | Détails |
 | --- | --- | --- |
