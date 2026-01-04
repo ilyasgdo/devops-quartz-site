@@ -35,6 +35,16 @@ Kubernetes Deployment, Minikube, Flask, Vue.js, Full Stack
 
 **🔗 Repository** : [https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien](https://github.com/ilyasgdo/Projet-Full-Stack-ESIEE-2025-Ilyas-Cyprien)
 
+### 🌐 Application en Ligne
+
+| Composant | URL | Infrastructure |
+|-----------|-----|----------------|
+| **Frontend** | [https://ilyasghandaoui.store](https://ilyasghandaoui.store) | Cloudflare Pages |
+| **Backend API** | [https://api.ilyasghandaoui.store](https://api.ilyasghandaoui.store) | Cloudflare Tunnel → Minikube Local |
+| **Documentation** | [https://docs.ilyasghandaoui.store](https://docs.ilyasghandaoui.store) | Cloudflare Pages |
+
+> **Architecture hybride** : Le frontend est déployé sur le CDN Cloudflare Pages (disponible 24/7), tandis que le backend utilise un tunnel Cloudflare pour exposer le cluster Kubernetes local (Minikube) sur Internet.
+
 ---
 
 ## 📋 Table des Matières
