@@ -37,6 +37,7 @@ Bienvenue sur mon portfolio technique regroupant mes projets et rapports académ
 - [TP1 - Introduction au Cloud](./devops/tp1) - Déploiement local, PaaS (Render), IaaS (AWS EC2)
 - [TP2 - AWS, Ansible, Packer, OpenTofu](./devops/tp2) - Infrastructure as Code
 - [TP5 - Kubernetes & CI/CD Avancé](./devops/tp5) - Container Orchestration
+- [TP6 - AWS Organizations & Kubernetes](./devops/tp6) - Multi-Account Strategy, IAM Roles
 
 **🔗 Liens :**
 - [GitHub - TPs DevOps](https://github.com/ilyasgdo/ESIEE_2526_devops)
