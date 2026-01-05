@@ -62,6 +62,9 @@ Rendu volumétrique temps réel avec ray marching et effets de lumière physique
 ### 🏔️ Partie 2 : Terrain Procédural Infini (Ilyas)
 Génération procédurale de terrains avec LOD dynamique et streaming optimisé.
 
+### ⚔️ Partie 3 : Scène de Débarquement (Cyprien)
+Simulation graphique avancée d'un débarquement avec tempête de sable, océan volumétrique et rendu cinématique.
+
 ---
 
 ## 🎨 Techniques Avancées Implémentées
@@ -207,9 +210,4 @@ Ce projet démontre une **maîtrise complète** des techniques d'infographie 3D 
 ✅ **Qualité visuelle** : Rendu physiquement réaliste  
 ✅ **Documentation complète** : Rapports techniques détaillés
 
-Le projet va **au-delà des attentes** en combinant deux systèmes complexes (nuages volumétriques + terrain procédural) dans une expérience cohérente et optimisée.
-Génération de terrain procédural infini avec :
-- Bruit de Perlin multi-octaves
-- Level of Detail (LOD) dynamique
-- Chunk-based streaming
-- Mesh optimization
+Le projet va **au-delà des attentes** en combinant deux systèmes complexes (nuages volumétriques + terrain procédural) et une scène cinématique optimisée dans une expérience cohérente.
