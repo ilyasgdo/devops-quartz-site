@@ -37,6 +37,7 @@ Bienvenue sur mon portfolio technique regroupant mes projets et rapports académ
 - [TP1 - Introduction au Cloud](./devops/tp1) - Déploiement local, PaaS (Render), IaaS (AWS EC2)
 - [TP2 - AWS, Ansible, Packer, OpenTofu](./devops/tp2) - Infrastructure as Code
 - [TP5 - Kubernetes & CI/CD Avancé](./devops/tp5) - Container Orchestration
+- [TP6 - AWS Organizations & Kubernetes](./devops/tp6) - Multi-Account Strategy, IAM Roles
 
 **🔗 Liens :**
 - [GitHub - TPs DevOps](https://github.com/ilyasgdo/ESIEE_2526_devops)
@@ -47,9 +48,19 @@ Bienvenue sur mon portfolio technique regroupant mes projets et rapports académ
 
 ### Projet
 
-**[Projet Génération Procédurale & Nuages Volumétriques](./unity/projet)**
+**[Projet Infographie Avancée 3D](./unity/projet)** - Tous les objectifs pédagogiques atteints ✅
 
-Deux techniques graphiques avancées combinées :
+**Exploration avancée de l'infographie 3D avec Unity : Modélisation, Shaders et Effets Visuels**
+
+| Objectif Pédagogique | Statut |
+|---------------------|--------|
+| Shaders Personnalisés Complexes | ✅ Ray Marching, Beer-Lambert |
+| Systèmes de Particules Avancés | ✅ Nuages volumétriques 3D |
+| Techniques d'Éclairage Avancées | ✅ Light Scattering (Mie/Rayleigh) |
+| Post-Processing Personnalisé | ✅ Chaîne de rendu volumétrique |
+| Optimisation des Performances | ✅ LOD dynamique, GPU Compute |
+
+**Rapports techniques détaillés :**
 
 | Rapport | Techniques |
 |---------|------------|

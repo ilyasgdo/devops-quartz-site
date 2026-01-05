@@ -27,3 +27,6 @@ Infrastructure as Code, Configuration Management, Image Building
 
 ### [TP5 - Kubernetes & CI/CD Avancé](./tp5)
 Container Orchestration, Déploiements avancés, Production-Grade
+
+### [TP6 - AWS Organizations & Kubernetes](./tp6)
+Multi-Account Strategy, IAM Roles, Kubernetes Local Orchestration
