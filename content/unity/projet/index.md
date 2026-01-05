@@ -157,15 +157,35 @@ Génération procédurale de terrains avec LOD dynamique et streaming optimisé.
 
 ---
 
-## 🎬 Démonstration
+### [Rapport Scène Débarquement](./scene-debarquement)
 
+**Implémentation complète** :
+- ✅ Render Graph & Optimisation Forward+
+- ✅ Simulation de Tempête de Sable (GPU-Driven)
+- ✅ Hydrodynamique (Gerstner Waves & Shore Masking)
+- ✅ Effets Volumétriques (Brouillard Raymarched)
+
+**Objectifs atteints** : Optimisation des performances, Shaders complexes, Systèmes de particules, Éclairage avancé
+
+---
+
+## 🎬 Démonstrations
+
+### 1. Nuages & Terrain
 **Vidéo YouTube** : [Operation Dragoon - Beneath the Sand](https://www.youtube.com/watch?v=IKLIivcP06g)
 
 La vidéo démontre :
 - Terrain procédural infini en temps réel
 - Nuages volumétriques avec effets de lumière dynamiques
 - Performance fluide (60+ FPS)
-- Qualité visuelle AAA
+
+### 2. Scène de Débarquement
+**Vidéo YouTube** : [Rendu Technique - Scène 1B](https://www.youtube.com/watch?v=qGEkDp0cx1Y)
+
+La vidéo démontre :
+- Simulation d'eau et shore masking
+- Tempête de sable volumétrique 6-Way
+- Distorsion thermique et effets caméra
 
 ---
 
@@ -193,14 +213,3 @@ Génération de terrain procédural infini avec :
 - Level of Detail (LOD) dynamique
 - Chunk-based streaming
 - Mesh optimization
-
-### [Rapport Scène Débarquement](./scene-debarquement)
-Architecture de rendu et simulation avancée pour la scène 1B :
-- Render Graph & Optimisation Forward+
-- Simulation de Tempête de Sable (GPU-Driven)
-- Hydrodynamique (Gerstner Waves & Shore Masking)
-
-## Ressources
-
-- **Dépôt Git** : [procedural-generation-and-volumetric-cloud](https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud)
-- **Vidéo démo** : [YouTube](https://www.youtube.com/watch?v=IKLIivcP06g)
