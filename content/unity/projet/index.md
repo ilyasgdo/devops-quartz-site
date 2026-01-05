@@ -52,6 +52,12 @@ Génération de terrain procédural infini avec :
 - Chunk-based streaming
 - Mesh optimization
 
+### [Rapport Scène Débarquement](./scene-debarquement)
+Architecture de rendu et simulation avancée pour la scène 1B :
+- Render Graph & Optimisation Forward+
+- Simulation de Tempête de Sable (GPU-Driven)
+- Hydrodynamique (Gerstner Waves & Shore Masking)
+
 ## Ressources
 
 - **Dépôt Git** : [procedural-generation-and-volumetric-cloud](https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud)

@@ -29,7 +29,7 @@ Kubernetes Deployment, Minikube, Flask, Vue.js, Full Stack
 
 > Projet Cloud Native DevOps - ESIEE Paris 2025
 > 
-> 👤 **Auteur**: Ilyas GHANDAOUI E4FI ESIEE Paris
+> 👤 **Auteurs**: Ilyas GHANDAOUI & Cyprien BOSCHER E4FI ESIEE Paris
 > 
 > 📅 **Date**: 28 décembre 2025
 

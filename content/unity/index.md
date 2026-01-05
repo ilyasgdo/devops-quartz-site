@@ -21,6 +21,7 @@ tags:
 Projet Unity combinant techniques graphiques avancées :
 - [Rapport Nuages Volumétriques](./projet/nuages-volumetriques) - Ray Marching, Light Scattering
 - [Rapport Terrain Procédural](./projet/terrain-procedural) - Perlin Noise, LOD dynamique
+- [Rapport Scène Débarquement](./projet/scene-debarquement) - Architecture Rendu, Physique des Vagues & Culling
 
 **Vidéo** : [YouTube](https://www.youtube.com/watch?v=IKLIivcP06g)
 
