@@ -8,6 +8,12 @@ tags:
 
 # TP 2 Chapitre 2
 
+> ESIEE Paris - E4FI - 2025
+> 
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER
+> 
+> 👨‍🏫 **Enseignant** : Badr TAJINI
+
 ![](/static/unity/tp2-chapitre2/image2.png)
 
 ![](/static/unity/tp2-chapitre2/image6.png)

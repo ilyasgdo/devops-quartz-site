@@ -35,9 +35,11 @@ Cloud Native Applications, Twelve-Factor App, Microservices
 
 > Projet Cloud Native DevOps - ESIEE Paris 2025
 > 
-> 👤 **Auteur**: Ilyas GHANDAOUI E4FI
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
 > 
-> 📅 **Date**: 28 décembre 2025
+> 👨‍🏫 **Enseignant** : Badr TAJINI
+> 
+> 📅 **Date** : 28 décembre 2025
 
 Dépôt git avec tous les TPs: [https://github.com/ilyasgdo/ESIEE_2526_devops.git](https://github.com/ilyasgdo/ESIEE_2526_devops.git)
 

@@ -36,7 +36,9 @@ Service Mesh (Istio, Linkerd), Observability (Prometheus, Grafana, Jaeger)
 
 > Projet Cloud Native DevOps - ESIEE Paris 2025
 > 
-> 👤 **Auteur**: Ilyas GHANDAOUI E4FI
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
+> 
+> 👨‍🏫 **Enseignant** : Badr TAJINI
 
 ## Partie 1
 

@@ -3,9 +3,13 @@ title: Home
 publish: true
 ---
 
-# 📚 Portfolio Technique - Ilyas GHANDAOUI
+# 📚 Portfolio Technique
 
 > ESIEE Paris - E4FI
+> 
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER
+> 
+> 👨‍🏫 **Enseignant** : Badr TAJINI
 > 
 > 📅 Décembre 2025
 

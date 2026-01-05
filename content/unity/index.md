@@ -13,7 +13,9 @@ tags:
 
 > ESIEE Paris - E4FI - 2025
 > 
-> 👤 **Auteurs**: Ilyas GHANDAOUI, Cyprien BOSCHER
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER
+> 
+> 👨‍🏫 **Enseignant** : Badr TAJINI
 
 ## Projet
 

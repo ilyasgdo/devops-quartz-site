@@ -32,9 +32,11 @@ Post-Processing Stack, LOD System, Performance Optimization
 > 
 > Projet Pluridisciplinaire - ESIEE Paris 2025
 > 
-> 👤 **Auteurs**: Ilyas GHANDAOUI, Cyprien BOSCHER - E4FI
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
 > 
-> 📅 **Date**: Décembre 2025
+> 👨‍🏫 **Enseignant** : Badr TAJINI
+> 
+> 📅 **Date** : Décembre 2025
 
 ---
 

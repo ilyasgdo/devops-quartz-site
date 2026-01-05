@@ -39,7 +39,9 @@ Configuration Drift, Compliance as Code, Policy as Code
 
 > Projet Cloud Native DevOps - ESIEE Paris 2025
 > 
-> 👤 **Auteur**: Ilyas GHANDAOUI E4FI
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
+> 
+> 👨‍🏫 **Enseignant** : Badr TAJINI
 
 ## Partie 1 - Scripts Bash AWS
 

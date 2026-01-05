@@ -9,6 +9,10 @@ tags:
 # DevOps - Cloud Native & Infrastructure
 
 > ESIEE Paris - E4FI - 2025
+> 
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER
+> 
+> 👨‍🏫 **Enseignant** : Badr TAJINI
 
 ## Projet
 

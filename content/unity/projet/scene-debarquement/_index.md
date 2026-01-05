@@ -23,7 +23,9 @@ keywords:
 >
 > **Module** : Rendu & Optimisation Scène 1B (Débarquement)
 >
-> **Auteur** : Cyprien BOSCHER
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
+>
+> 👨‍🏫 **Enseignant** : Badr TAJINI
 
 Cette section détaille l'implémentation bas-niveau des systèmes graphiques et de simulation actifs dans la scène de débarquement. L'objectif est de maintenir une fidélité visuelle cinématographique (`60fps` cible) tout en gérant une géométrie complexe et des effets volumétriques multiples.
 

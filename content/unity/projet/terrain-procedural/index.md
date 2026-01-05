@@ -39,9 +39,11 @@ Biome Generation, Erosion Simulation, Hydraulic Erosion, Thermal Erosion
 
 **Date** :  9 Décembre 2025
 
-**Auteur** : Ilyas Ghandaoui
+**Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
 
-**Depo git des scripts** :  [https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene/Scripts](https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene/Scripts)
+**Enseignant** : Badr TAJINI
+
+**Dépôt git des scripts** :  [https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene/Scripts](https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene/Scripts)
 
 ---
 

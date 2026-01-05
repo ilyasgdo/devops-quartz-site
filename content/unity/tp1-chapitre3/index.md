@@ -8,6 +8,12 @@ tags:
 
 # TP 1 Chapitre 3
 
+> ESIEE Paris - E4FI - 2025
+> 
+> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER
+> 
+> 👨‍🏫 **Enseignant** : Badr TAJINI
+
 Étape 1 : Je vous invite à démarrer Unity et ensuite, de créer un nouveau projet. Il contiendra
 
 une lumière directionnelle par défaut.

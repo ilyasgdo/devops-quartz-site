@@ -39,8 +39,11 @@ Performance Optimization, GPU Profiling, Frame Rate Optimization
 
 **Date** : 7 Décembre 2025
 
-**Auteur** : Ilyas Ghandaoui E4FI
-**Depo git** : [https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene](https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene)
+**Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
+
+**Enseignant** : Badr TAJINI
+
+**Dépôt git** : [https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene](https://github.com/ilyasgdo/procedural-generation-and---volumetric-cloud/tree/main/ARessourcesPlaneScene)
 **Video** : [https://www.youtube.com/watch?v=IKLIivcP06g](https://www.youtube.com/watch?v=IKLIivcP06g)
 
 ---
