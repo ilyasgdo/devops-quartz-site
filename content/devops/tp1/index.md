@@ -35,7 +35,7 @@ Cloud Native Applications, Twelve-Factor App, Microservices
 
 > Projet Cloud Native DevOps - ESIEE Paris 2025
 > 
-> 👤 **Auteurs** : Ilyas GHANDAOUI & Cyprien BOSCHER - E4FI
+> 👤 **Auteurs** : Ilyas GHANDAOUI, Cyprien BOSCHER & Lorenzo BAVARD - E4FI
 > 
 > 👨‍🏫 **Enseignant** : Badr TAJINI
 > 
